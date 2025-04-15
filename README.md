@@ -83,5 +83,16 @@ To perform SQL-based exploratory analysis and extract meaningful insights from t
 
   **MySQL**
 
-  
+---
+
+ # Author
+ 
+**Anjali Singh**
+
+Aspiring Business and Data Analyst
+
+🔗 [LinkedIn] :-www.linkedin.com/in/anjalissingh
+
+
+---
 
