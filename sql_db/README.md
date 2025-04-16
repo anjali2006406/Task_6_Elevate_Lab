@@ -3,6 +3,7 @@
 **Q1.Total number of distinct mobile models sold?**
 
  > **Query**: Count the number of unique mobile models in the dataset.
+
  > **Concepts**: COUNT(DISTINCT), SELECT
 
 **Input Query:**
