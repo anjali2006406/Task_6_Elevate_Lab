@@ -13,7 +13,8 @@ FROM Sales;
 
 **Result Output:**
 
-![image](https://github.com/user-attachments/assets/e8a3962c-5149-4e35-8180-faf1728cbf4a)
+![image](https://github.com/user-attachments/assets/b6ca1d80-2d28-4ab5-a426-3729ec8b19c8)
+
 
 **Q2. Brand-wise Total Number of Mobile Models**
 
@@ -99,4 +100,78 @@ limit 1;
 **Result Output:**
 
 ![image](https://github.com/user-attachments/assets/d3f8f2c7-938d-4fdf-940d-adb100e015ac)
+
+
+**Q7.Camera-wise Average Selling Price**
+
+> **Query**:Camera-wise average selling price (Camera = Yes/No)?
+
+> **concepts**: GROUP BY, AVG(), ROUND()
+
+**Input Query:**
+
+> select Camera, round(avg(`Selling Price`), 2) 
+as avg_selling_price
+from Sales group by Camera
+order by avg_selling_price desc;
+
+
+**Result Output:**
+
+![image](https://github.com/user-attachments/assets/81a04628-4be9-4675-9b96-8d0e13add4e6)
+
+
+**Q8.Mobiles having original price greater than 40000**
+
+> **Query**: List of mobiles having original price greater than 40000?
+
+> **Concepts**: WHERE,ORDER BY
+
+**Input Query:**
+
+> select Mobile, `Original Price`
+from Sales
+where `Original Price` > 40000
+order by `Original Price` desc;
+
+
+**Result Output:**
+
+![image](https://github.com/user-attachments/assets/f61cd3b9-f629-46e5-9947-cc17bf604d97)
+
+
+**Q9.Mobiles that have camera**
+
+> **Query**: Total number of mobiles that have camera?
+
+> **Concepts**: WHERE
+
+**Input Query:**
+
+> select count(*) as camera_phones
+from Sales where Camera = 'Yes';
+
+**Result Output:**
+
+![image](https://github.com/user-attachments/assets/31b3e070-7b12-4378-b425-cf88b7e56031)
+
+**10.Brand highest total discount amount**
+
+> **Query**: Brand with highest total discount amount?
+
+> **Concepts**:GROUP BY , ORDER BY
+
+**Input Query:**
+
+> select Brands, sum(Discount) as total_discount
+from Sales group by Brands
+order by total_discount desc
+limit 1;
+
+**Result Output:**
+
+![image](https://github.com/user-attachments/assets/6cc480bf-4b09-4956-8e4b-c2e80197a0c6)
+
+
+--- 
 
